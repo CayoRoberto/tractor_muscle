@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Note Sans', Calibri, sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+
+.container-cadastro{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #201b2c
+
+}
+
+
+.container-form{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content:flex-start;
+
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+
+}
+
+.cadastro-titulo{
+    color: #00ff88;
+
+    font-weight: 800;
+
+}
+
+.formulario H1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #00ff88;
+
+
+}
+
+.item-form {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.item-form input {
+    width: 100%; /* Faz com que o input ocupe toda a largura disponível */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.botao-cadastrar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-cadastrar {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    text-decoration: none;
+}
+
+
+

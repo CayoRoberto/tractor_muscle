@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content=".">
+            <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+            <title>Login</title>
+            <!-- Folhas de estilo -->
+            <link rel="stylesheet" href="/src/app/components/cadastro/cadastro.component.css">
+
+            <!--Swiper-->
+            <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+
+        <!-- CSS do cabeçalho -->
+        <!-- <link rel="stylesheet" href="../../assets/css/cabecalho/cabecalho.css">
+        <link rel="stylesheet" href="../../assets/css/cabecalho/navegacao.css">
+        <link rel="stylesheet" href="../../assets/css/menu/menu.css"> -->
+
+            <!-- Estilos -->
+
+        <!-- Folhas de estilo -->
+        <!-- <link rel="stylesheet" href="../../assets/css/cadastro/cadastro.css"> -->
+
+
+
+
+
+            <!-- Ícones do Rodapé-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+            <!-- Fontes -->
+            <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Open+Sans:wght@500&display=swap" rel="stylesheet"> -->
+    </head>
+    <body>
+        <div class="container-cadastro">
+            <div class="container-form">
+                <form class="formulario">
+                    <h1 class="cadastro-titulo">CADASTRE-SE</h1>
+                    <div class="item-form">
+
+                        <label  class="label" for="nome">Primeiro nome:</label>
+                        <input type="text" name ="nome" placeholder="Primeiro nome">
+
+                    </div>
+
+                    <div class="item-form">
+
+                        <label  class="label" for="sobrenome">Sobrenome:</label>
+                        <input type="text" name ="sobrenome" placeholder="Sobrenome">
+
+                    </div>
+
+                    <div class="item-form">
+
+                        <label  class="label" for="email">E-mail:</label>
+                        <input type="email" name ="email" placeholder="E-mail">
+
+                    </div>
+
+                    <div class="item-form">
+
+                        <label  class="label" for="senha">Senha:</label>
+                        <input type="password" name ="senha" placeholder="Senha">
+
+                    </div>
+
+                    <div class="item-form">
+
+                        <label  class="label" for="confirmar-senha">Confirmar senha:</label>
+                        <input type="password" name ="confirmar-senha" placeholder="Confirmar senha">
+
+                    </div>
+
+
+                </form>
+
+                <div class="botao-cadastrar" >
+                    <a  class="btn-cadastrar" (click)="irParaLogin()">Cadastrar</a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,1 +1,275 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Note Sans', Calibri, sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.cabecalho {
+  background-color: #201b2c;
+  border-bottom: 1px solid #e4e4e4;
+  /* height: 4.5rem; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.cabecalho-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 24px;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo__nome{
+  color: #00ff88;
+  font-family: Caveat Brush, cursive;
+  font-size: 2.25rem;
+}
+
+.logo__image {
+  width: 30%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* .cabecalho-logo {
+  font-family: var(--poppins);
+  font-weight: 700;
+  color: var(--branco);
+  font-size: 42px;
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+} */
+
+/* .cabecalho-logo::before {
+  content: '';
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  background:  no-repeat center / contain;
+  position: relative;
+  left: -16px;
+  transition: 0.5s ease all;
+
+}
+
+.cabecalho__logo:hover::before {
+  background-image: url(../../img/logo-reverse.svg);
+} */
+
+@media screen and (max-width: 768px) {
+
+  .cabecalho__container {
+      justify-content: center;
+      background-color: var(--azul);
+      position: relative;
+  }
+
+  .cabecalho__navegacao {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: -400px;
+      transition: .8s ease all;
+      opacity: 0;
+  }
+
+  .cabecalho__navegacao.cabecalho__navegacao--ativo {
+      display: block;
+      top: 0px;
+      opacity: 1;
+  }
+
+  .cabecalho__hamburger {
+      width: 24px;
+      height: 24px;
+      /* background: url(../../img/menu-mobile.svg) no-repeat center / contain; */
+      position: absolute;
+      left: 24px;
+      top: 42px;
+      cursor: pointer;
+      z-index: 6;
+  }
+
+  .cabecalho__logo {
+      font-size: 32px;
+  }
+
+  .cabecalho__logo::before {
+      display: none;
+  }
+}
+
+.cabecalho__menu {
+  display: flex;
+  align-items: center;
+  width: 360px;
+  justify-content: space-between;
+}
+
+.cabecalho__item-menu {
+  text-decoration: none;
+}
+
+.cabecalho__menu-texto {
+  color: white;
+  font-family: var(--barlow);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.geral__botao {
+  border: 2px solid var(--branco);
+  padding: 10px 30px;
+  border-radius: 60px;
+  font-family: var(--barlow);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .5s ease all;
+}
+
+.geral__botao:hover {
+  transform: scale(1.1);
+  color: #00ff88;
+}
+
+.primary-button {
+  background-color: var(--branco);
+  color: var(--azul);
+}
+
+.secundary-button {
+  background-color: transparent;
+  color: var(--branco);
+}
+
+.cabecalho__item-menu--logo {
+  display: none;
+}
+
+.ri-close-line {
+  display: none;
+}
+
+.menu__icon{
+  color: #FF9700;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width:992px){
+  .menu__icon{
+     display: none;
+  }
+
+}
+
+@media screen and (min-width: 1140px) {
+  .cabecalho__menu {
+      width: 390px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .cabecalho__menu {
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: center;
+      left: 0px;
+      background-color: var(--branco);
+      color: var(--azul);
+      top: 96px;
+      width: 100vw;
+      box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.11);
+      z-index: 4;
+      position: absolute;
+      padding-top: 88px;
+  }
+
+  .cabecalho__item-menu--logo {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 18px;
+      left: 22px;
+  }
+
+  .cabecalho__item-menu--logo img {
+      width: 100%;
+  }
+
+  .ri-close-line {
+      display: block;
+      text-align: center;
+      justify-self: flex-end;
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+      background-color: #0091ff1c;
+      border-radius: 100%;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+  }
+
+  .cabecalho__menu-texto,
+  .cabecalho__item-menu .secundary-button,
+  .cabecalho__item-menu .primary-button {
+      color: var(--azul);
+      background-color: transparent;
+  }
+
+  .cabecalho__item-menu {
+      width: 100%;
+      padding: 24px;
+  }
+
+  .cabecalho__item-menu:hover {
+      background-color: #0091ff1c;
+  }
+
+  .cabecalho__item-menu .geral__botao {
+      background-color: none;
+      border: none;
+      padding: 0;
+  }
+
+  .cabecalho__item-menu .geral__botao:hover {
+      transform: scale(1);
+  }
+
+}
+
+.menu{
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 5rem;
+}
+
+@media screen and (min-width:992px){
+
+  .menu{
+    max-width: 60rem;
+  }
+}
