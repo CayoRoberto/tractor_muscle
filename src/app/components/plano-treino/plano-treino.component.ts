@@ -4,7 +4,7 @@ import { Component} from '@angular/core';
 @Component({
   selector: 'app-plano-treino',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './plano-treino.component.html',
   styleUrl: './plano-treino.component.css'
 })
@@ -22,6 +22,7 @@ export class PlanoTreinoComponent {
     }else{
       this.dia = "Próximo";
     }
+    console.log(`TREINO ${this.trainings[this.currentIndex]}`);
     return `Série de ${this.dia}: TREINO ${this.trainings[this.currentIndex]}`;
   }
   // Treino atual
