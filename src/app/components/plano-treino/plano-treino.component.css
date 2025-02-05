@@ -1,0 +1,64 @@
+.container{
+  width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.training-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.training{
+  text-align: left;
+  margin-bottom: 10px;
+
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-treino {
+  background-color: #008000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-treino:hover {
+  background-color: #005f00;
+}
+
+.training-details {
+  margin-top: 20px;
+}
+
+.training {
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+.training.active {
+  display: block;
+}

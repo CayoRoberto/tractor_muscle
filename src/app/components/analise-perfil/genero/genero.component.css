@@ -38,6 +38,10 @@ container-plano-treino h1{
   margin: 20px 0;
 }
 
+.radio-label{
+  color: white;
+}
+
 /* Estiliza o botão */
 .btn-submit {
   background-color: #007bff;

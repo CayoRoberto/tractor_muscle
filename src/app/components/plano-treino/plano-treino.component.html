@@ -87,5 +87,66 @@
 
             </header>
 
+            <main class="container">
+              <div class="info-box">
+                <p>Início: 03/01/2025</p>
+                <p>Vencimento: 18/06/2025</p>
+                <p>Gênero: Masculino</p>
+                <p>Objetivo: Ganho de massa muscular</p>
+                <p>Nome: #####</p>
+                <p>Nível: Iniciante</p>
+              </div>
+
+
+              <div class="training-container">
+                <div class="navigation">
+                  <button class="btn-treino" (click)="previousTraining()">&lt;</button>
+                  <h2>{{ currentTrainingTitle }}</h2>
+                  <button class="btn-treino" (click)="nextTraining()">&gt;</button>
+                </div>
+
+                <div class="training-details" id="training-details">
+                  @if(trainings[currentIndex] === 'A'){
+                    <!-- Treino A (default) -->
+                  <ul id="training-a" class="training active">
+                    <li>ESCADA - 10 min</li>
+                    <li>SUPINO MÁQUINA - 4 x 12</li>
+                    <li>DESENVOLVIMENTO ARNOLD - 4 x 12</li>
+                    <li>CRUCIFIXO RETO - 4 x 12</li>
+                    <li>REMADA SERROTE - 4 x 12</li>
+                    <li>BÍCEPS ALTERNADO SCOTT ARRA W - 4 x 12</li>
+                    <li>BÍCEPS BANCO SCOTT BARRA W - 4 x 12</li>
+                  </ul>
+
+                  }@else if(trainings[currentIndex] == 'B'){
+                    <!-- Treino B -->
+                  <ul id="training-b" class="training">
+                    <li>AQUECIMENTO NA ESTEIRA - 15 min</li>
+                    <li>SUPINO INCLINADO HALTER - 4 x 10</li>
+                    <li>AGACHAMENTO LIVRE - 4 x 12</li>
+                    <li>STIFF HALTER - 4 x 12</li>
+                    <li>REMADA CURVADA - 4 x 12</li>
+                    <li>TRÍCEPS TESTA - 4 x 12</li>
+                    <li>TRÍCEPS CORDA - 4 x 12</li>
+                  </ul>
+                  }@else if(trainings[currentIndex] === 'C'){
+                    <!-- Treino C -->
+                  <ul id="training-c" class="training">
+                    <li>AQUECIMENTO NA BIKE - 15 min</li>
+                    <li>SUPINO DECLINADO - 4 x 10</li>
+                    <li>LEVANTAMENTO TERRA - 4 x 12</li>
+                    <li>PASSADA - 4 x 12</li>
+                    <li>DESENVOLVIMENTO OMBRO HALTER - 4 x 12</li>
+                    <li>ABDOMINAL CANIVETE - 4 x 20</li>
+                    <li>ABDOMINAL OBLIQUO - 4 x 20</li>
+                  </ul>
+
+                }
+
+
+                </div>
+              </div>
+            </main>
+
         </body>
     </html>

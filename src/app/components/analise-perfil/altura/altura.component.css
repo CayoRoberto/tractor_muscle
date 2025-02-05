@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .container-plano-treino{
     display: flex;
     flex-direction: column;
@@ -16,28 +16,32 @@
     background: #2f2841;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
-  
+
   }
-  
+
   container-plano-treino h1{
     color: white;
   }
-  
-  
+
+
   .radio-input{
     cursor: pointer;
     background-color: #4caf50;
   }
-  
+
+  .label{
+    color: white;
+  }
+
   /* Estiliza os checkboxes */
   .radio-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  
+
     margin: 20px 0;
   }
-  
+
   /* Estiliza o botão */
   .btn-submit {
     background-color: #007bff;
@@ -49,12 +53,12 @@
     cursor: pointer;
     margin-top: 10px;
   }
-  
+
   .btn-submit:hover {
     background-color: #0056b3;
   }
-  
-  
+
+
   .btn-plano{
     padding: 10px 0px;
       margin: 25px;
@@ -69,4 +73,3 @@
       cursor: pointer;
       box-shadow: 0px 10px 40px -12px #00ff8052;
   }
-  

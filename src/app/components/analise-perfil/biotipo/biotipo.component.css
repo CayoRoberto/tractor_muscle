@@ -1,0 +1,77 @@
+/* Estiliza a tela */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #201b2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-plano-treino{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 35px;
+  background: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+
+}
+
+container-plano-treino h1{
+  color: white;
+}
+
+
+.radio-input{
+  cursor: pointer;
+  background-color: #4caf50;
+}
+
+
+
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 20px 0;
+}
+
+.radio-label{
+  color: white;
+}
+
+/* Estiliza o botão */
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+
+.btn-plano{
+  padding: 10px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}

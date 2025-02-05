@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-biotipo',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './biotipo.component.css'
 })
 export class BiotipoComponent {
+
+  constructor(private router: Router){
+
+        }
+
+
+        irParaAnalisePlanoObjetivo(){
+          this.router.navigate(['/objetivo']);
+        }
 
 }

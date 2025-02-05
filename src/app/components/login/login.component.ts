@@ -24,4 +24,8 @@ export class LoginComponent {
   irPaginaInicial(){
     this.router.navigate(['/home']);
   }
+
+  irParaHome(){
+    this.router.navigate(['/home'], {queryParams: {sucesso: false}});
+  }
 }

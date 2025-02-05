@@ -1,1 +1,75 @@
-<p>medidas-corporais works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content=".">
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+        <title>Login</title>
+        <!-- Folhas de estilo -->
+        <link rel="stylesheet" href="/src/app/components/cadastro/cadastro.component.css">
+
+        <!--Swiper-->
+        <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+        <!-- Ícones do Rodapé-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+
+  <main class="main-content">
+    <div class="container-medidas">
+      <h1 class="title">Suas medidas corporais</h1>
+      <form class="form-container">
+        <div class="form-group">
+          <label for="peitoral">Peitoral:</label>
+          <input type="text" id="peitoral" name="peitoral">
+        </div>
+        <div class="form-group">
+          <label for="barriga">Barriga:</label>
+          <input type="text" id="barriga" name="barriga">
+        </div>
+        <div class="form-group">
+          <label for="quadril">Quadril:</label>
+          <input type="text" id="quadril" name="quadril">
+        </div>
+        <div class="form-group group-duo">
+          <label for="biceps-direito">Bíceps direito:</label>
+          <input type="text" id="biceps-direito" name="biceps-direito">
+          <label for="biceps-esquerdo">Bíceps esquerdo:</label>
+          <input type="text" id="biceps-esquerdo" name="biceps-esquerdo">
+        </div>
+        <div class="form-group group-duo">
+          <label for="antebraco-direito">Antebraço direito:</label>
+          <input type="text" id="antebraco-direito" name="antebraco-direito">
+          <label for="antebraco-esquerdo">Antebraço esquerdo:</label>
+          <input type="text" id="antebraco-esquerdo" name="antebraco-esquerdo">
+        </div>
+        <div class="form-group group-duo">
+          <label for="coxa-direita">Coxa direita:</label>
+          <input type="text" id="coxa-direita" name="coxa-direita">
+          <label for="coxa-esquerda">Coxa esquerda:</label>
+          <input type="text" id="coxa-esquerda" name="coxa-esquerda">
+        </div>
+        <div class="form-group group-duo">
+          <label for="panturrilha-direita">Panturrilha direita:</label>
+          <input type="text" id="panturrilha-direita" name="panturrilha-direita">
+          <label for="panturrilha-esquerda">Panturrilha esquerda:</label>
+          <input type="text" id="panturrilha-esquerda" name="panturrilha-esquerda">
+        </div>
+        <div class="form-group">
+          <label for="gordura">Gordura corporal:</label>
+          <input type="text" id="gordura" name="gordura">
+        </div>
+        <button type="submit" class="submit-btn" avalaicaoInicial= true (click)="irParaHome()">Finalizar</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

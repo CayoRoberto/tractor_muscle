@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit  } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +8,29 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
-  constructor(private router: Router){
+  sucesso: boolean = false;
+
+  constructor(private router: Router, private route: ActivatedRoute){
 
     }
 
 
     irParaAnalisePlano(){
       this.router.navigate(['/genero']);
+    }
+
+    VisualizarTreino(){
+      this.router.navigate(['/treino']);
+    }
+
+    ngOnInit(){
+      // Obtenha o valor de 'sucesso' nos query parameters
+    this.route.queryParams.subscribe(params => {
+      this.sucesso = params['sucesso'] === 'true'; // Converter para booleano
+      console.log('Sucesso:', this.sucesso); // Apenas para depuração
+    });
     }
 
 }
