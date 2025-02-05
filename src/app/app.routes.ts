@@ -4,6 +4,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HomeComponent } from './components/home/home.component';
 import { GeneroComponent } from './components/analise-perfil/genero/genero.component';
 import { IdadeComponent } from './components/analise-perfil/idade/idade.component';
+import { AlturaComponent } from './components/analise-perfil/altura/altura.component';
 
 export const routes: Routes = [
 
@@ -30,6 +31,11 @@ export const routes: Routes = [
   {
     path: "idade",
     component: IdadeComponent
+  },
+
+  {
+    path: "altura",
+    component: AlturaComponent
   },
 
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redireciona para login por padrão

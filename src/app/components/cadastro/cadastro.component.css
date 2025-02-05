@@ -22,8 +22,9 @@ body *{
 
 
 .container-form{
+   
     width: 60%;
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content:flex-start;
 
@@ -42,6 +43,13 @@ body *{
 
 }
 
+/* Garante que os elementos do formulário fiquem dentro */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
 .formulario H1::after{
     content: '';
     display: block;
@@ -53,13 +61,13 @@ body *{
 }
 
 .item-form {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     display: flex;
     flex-direction: column;
 }
 
 .item-form label {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     font-weight: bold;
     color: white;
 }
@@ -72,14 +80,18 @@ body *{
     font-size: 16px;
 }
 
-
-.botao-cadastrar {
-    margin-top: 20px;
-    text-align: center;
+.container-botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-cadastrar {
-    width: 100%;
+
+
+
+.botao-cadastrar{
+    text-align: center;
+    width: 10rem;
     padding: 16px 0px;
     margin: 25px;
     border: none;
@@ -94,6 +106,5 @@ body *{
     box-shadow: 0px 10px 40px -12px #00ff8052;
     text-decoration: none;
 }
-
 
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-idade',
@@ -9,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class IdadeComponent {
 
+  constructor(private router: Router){
+  
+        }
+  
+  
+        irParaInforAltura(){
+          this.router.navigate(['/altura']);
+        }
 }
