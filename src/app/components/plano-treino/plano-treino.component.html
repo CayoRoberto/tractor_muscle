@@ -88,6 +88,7 @@
             </header>
 
             <main class="container">
+             <div class="container-treino">
               <div class="info-box">
                 <p>Início: 03/01/2025</p>
                 <p>Vencimento: 18/06/2025</p>
@@ -106,7 +107,7 @@
                 </div>
 
                 <div class="training-details" id="training-details">
-                  @if(trainings[currentIndex] === 'A'){
+                  @if(trainings[currentIndex] == 'A'){
                     <!-- Treino A (default) -->
                   <ul id="training-a" class="training active">
                     <li>ESCADA - 10 min</li>
@@ -118,9 +119,9 @@
                     <li>BÍCEPS BANCO SCOTT BARRA W - 4 x 12</li>
                   </ul>
 
-                  }@else if(trainings[currentIndex] === 'B'){
+                  }@else if(trainings[currentIndex] == 'B'){
                     <!-- Treino B -->
-                  <ul id="training-b" class="training">
+                   <ul id="training-b" class="training active">
                     <li>AQUECIMENTO NA ESTEIRA - 15 min</li>
                     <li>SUPINO INCLINADO HALTER - 4 x 10</li>
                     <li>AGACHAMENTO LIVRE - 4 x 12</li>
@@ -129,9 +130,9 @@
                     <li>TRÍCEPS TESTA - 4 x 12</li>
                     <li>TRÍCEPS CORDA - 4 x 12</li>
                   </ul>
-                  }@else if(trainings[currentIndex] === 'C'){
+                  }@else if(trainings[currentIndex] == 'C'){
                     <!-- Treino C -->
-                  <ul id="training-c" class="training">
+                  <ul id="training-c" class="training active">
                     <li>AQUECIMENTO NA BIKE - 15 min</li>
                     <li>SUPINO DECLINADO - 4 x 10</li>
                     <li>LEVANTAMENTO TERRA - 4 x 12</li>
@@ -141,11 +142,12 @@
                     <li>ABDOMINAL OBLIQUO - 4 x 20</li>
                   </ul>
 
-                }
+                }@else{}
 
-                <h1>{{trainings[currentIndex] === 'C'}}</h1>
+                <h1>{{trainings[currentIndex] == 'C'}}</h1>
                 </div>
               </div>
+             </div>
             </main>
 
         </body>

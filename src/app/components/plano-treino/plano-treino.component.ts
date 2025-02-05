@@ -18,12 +18,12 @@ export class PlanoTreinoComponent {
   // Título do treino atual
   get currentTrainingTitle(): string {
     if(this.trainings[this.currentIndex] === 'A'){
-      this.dia = "Hoje";
+      this.dia = "de Hoje";
     }else{
       this.dia = "Próximo";
     }
     console.log(`TREINO ${this.trainings[this.currentIndex]}`);
-    return `Série de ${this.dia}: TREINO ${this.trainings[this.currentIndex]}`;
+    return `Série ${this.dia}: TREINO ${this.trainings[this.currentIndex]}`;
   }
   // Treino atual
   get currentTraining(): string {

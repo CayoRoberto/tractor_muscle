@@ -1,20 +1,34 @@
 .container{
   width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Evita que elementos ultrapassem os limites */
+    overflow: hidden;
     background: #201b2c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.container-treino{
+  width: 100%;
+  max-width: 600px; /* Ajuste conforme necessário */
+  height: auto; /* Permite que o conteúdo cresça sem ultrapassar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .info-box {
   background-color: #f4f4f4;
+  height: 15,265rem;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
 }
 
 .training-container {
+  width: 100%;
+  height: 17.2rem;
   display: flex;
   flex-direction: column;
   background-color: #f4f4f4;

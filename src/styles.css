@@ -16,7 +16,7 @@ body *{
   background-color: #201b2c;
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 24px;
-  /* height: 4.5rem; */
+  height: 4.5rem;
   height: 10%;
   position: fixed;
   left: 0;
