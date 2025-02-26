@@ -2,7 +2,7 @@ import { routes } from './../../app.routes';
 import { Component, Output } from '@angular/core';
 import { EventEmitter } from 'stream';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -18,8 +18,8 @@ export class LoginComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
-  
- 
+
+
   constructor(private authService: AuthService, private router: Router) {}
 
   submit() {
@@ -37,7 +37,7 @@ export class LoginComponent {
         }
       );
     }
-  } 
+  }
   // Método para navegar para a tela de cadastro
   irParaCadastro(){
     this.router.navigate(['/cadastro']);

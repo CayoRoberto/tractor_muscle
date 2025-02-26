@@ -45,40 +45,40 @@
     <body>
         <div class="container-cadastro">
             <div class="container-form">
-                <form class="formulario">
+                <form class="formulario" [formGroup]="cadastroForm">
                     <h1 class="cadastro-titulo">CADASTRE-SE</h1>
                     <div class="item-form">
 
                         <label  class="label" for="nome">Primeiro nome:</label>
-                        <input type="text" name ="nome" placeholder="Primeiro nome">
+                        <input type="text" formControlName="nome"  name ="nome" placeholder="Primeiro nome">
 
                     </div>
 
                     <div class="item-form">
 
                         <label  class="label" for="sobrenome">Sobrenome:</label>
-                        <input type="text" name ="sobrenome" placeholder="Sobrenome">
+                        <input type="text" formControlName="sobrenome" name ="sobrenome" placeholder="Sobrenome">
 
                     </div>
 
                     <div class="item-form">
 
-                        <label  class="label" for="email">E-mail:</label>
-                        <input type="email" name ="email" placeholder="E-mail">
+                        <label  class="label" for="login">E-mail:</label>
+                        <input type="email" formControlName="login" name ="login" placeholder="E-mail">
 
                     </div>
 
                     <div class="item-form">
 
                         <label  class="label" for="senha">Senha:</label>
-                        <input type="password" name ="senha" placeholder="Senha">
+                        <input type="password" formControlName="senha" name ="senha" placeholder="Senha">
 
                     </div>
 
                     <div class="item-form">
 
                         <label  class="label" for="confirmar-senha">Confirmar senha:</label>
-                        <input type="password" name ="confirmar-senha" placeholder="Confirmar senha">
+                        <input type="password" formControlName="confirmarSenha" name ="confirmar-senha" placeholder="Confirmar senha">
 
                     </div>
 
@@ -90,7 +90,7 @@
                         <a  class="btn-cadastrar" (click)="cadastrar()">Cadastrar</a>
                     </div>
                 </div>
-                
+
 
             </div>
         </div>
