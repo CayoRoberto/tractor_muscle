@@ -91,14 +91,14 @@
                     <div class="card-login">
                         <h1>LOGIN</h1>
                         <div class="textfield">
-                            <label for="usuario">Usuário</label>
-                            <input type="text" name ="usuario" placeholder="Usuário">
+                            <label for="usuario">Email</label>
+                            <input type="text" name ="email" placeholder="Email">
                         </div>
                         <div class="textfield">
                             <label for="senha">Senha</label>
                             <input type="password" name ="senha" placeholder="Senha">
                         </div>
-                        <button class="btn-login" (click)="irPaginaInicial()">Login</button>
+                        <button class="btn-login" (click)="submit()">Login</button>
                         <div class="login-inscrever">
                             <h2 class="texto__informacao--inscrever">Você não tem uma conta na Tractor muscle?</h2>
                             <a class="link-cadastro" avalaicaoInicial= false (click)="irParaCadastro()"  rel="noreferrer">

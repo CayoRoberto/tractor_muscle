@@ -11,10 +11,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   sucesso: boolean = false;
+  menuAberto: boolean = false;
 
   constructor(private router: Router, private route: ActivatedRoute){
 
     }
+
+    
+
+  // Método para alternar a exibição do menu
+  toggleMenu(): void {
+    this.menuAberto = !this.menuAberto;
+  }
 
 
     irParaAnalisePlano(){
