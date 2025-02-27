@@ -17,8 +17,9 @@ export class AuthService {
     return this.http.post<string>(`${this.apiUrl}/usuario/cadastrar`, usuario, {responseType: 'text' as 'json'});
   }
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/usuario/login`, { email, password });
+  login(login: string, senha: string): Observable<any> {
+    console.log('Enviando para o backend:', login);
+    return this.http.post<any>(`${this.apiUrl}/login`, { login, senha });
   }
 
 

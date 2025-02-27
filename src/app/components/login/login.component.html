@@ -42,14 +42,14 @@
         <body>
             <!-- <header class="cabecalho">
                 <div class="cabecalho-container">
-                    
+
                     <a class="logo__nome">Tractor Muscle</a>
 
                  <nav class="cabecalho__navegacao" data-navegacao>
-                   
+
                 <div class="cabecalho__menu">
                     <i class="ri-close-line ri-lg" data-fechar></i>
-                    
+
                     <span class="cabecalho__item-menu--logo">
                         <img src="/src/assets/img/logotipo2.png" alt="Logo Tractor Muscle">
                     </span>
@@ -90,15 +90,17 @@
                 <div class = "right-login">
                     <div class="card-login">
                         <h1>LOGIN</h1>
-                        <div class="textfield">
-                            <label for="usuario">Email</label>
-                            <input type="text" name ="email" placeholder="Email">
-                        </div>
-                        <div class="textfield">
-                            <label for="senha">Senha</label>
-                            <input type="password" name ="senha" placeholder="Senha">
-                        </div>
-                        <button class="btn-login" (click)="submit()">Login</button>
+                        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                          <div class="textfield">
+                              <label for="usuario">Email</label>
+                              <input type="text" formControlName="login" placeholder="Email">
+                          </div>
+                          <div class="textfield">
+                              <label for="senha">Senha</label>
+                              <input type="password" formControlName="senha" placeholder="Senha">
+                          </div>
+                          <button class="btn-login" type="submit">Login</button>
+                      </form>
                         <div class="login-inscrever">
                             <h2 class="texto__informacao--inscrever">Você não tem uma conta na Tractor muscle?</h2>
                             <a class="link-cadastro" avalaicaoInicial= false (click)="irParaCadastro()"  rel="noreferrer">
