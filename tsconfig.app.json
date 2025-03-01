@@ -8,6 +8,11 @@
       "node"
     ]
   },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "strictTemplates": true,
+    "enableControlFlow": true   // ESSA LINHA É ESSENCIAL
+  },
   "files": [
     "src/main.ts",
     "src/main.server.ts",

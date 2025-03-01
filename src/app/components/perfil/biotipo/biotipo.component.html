@@ -45,22 +45,27 @@
     <body>
       <main class="container">
         <div class="container-plano-treino">
-              <h1>Qual o seu principal objetivo?</h1>
+              <h1>Qual o seu biotipo?</h1>
               <div class="radio-container">
                 <label class="radio-label">
-                  <input type="radio" id="musculos" name="objetivo" value="musculos" class="radio-input">
+                  <input type="radio" id="ectomorfo" name="biotipo" value="ectomorfo" [(ngModel)]="biotipo" class="radio-input">
                   <span class="custom-radio"></span>
-                  Construir músculos
+                  Ectomorfo
                 </label>
 
                 <label class="radio-label">
-                  <input type="radio" id="peso" name="objetivo" value="peso" class="radio-input">
+                  <input type="radio" id="mesomorfo" name="biotipo" value="mesomorfo" [(ngModel)]="biotipo" class="radio-input">
                   <span class="custom-radio"></span>
-                  Perda de pesa e perda de gordura
+                  Mesomorfo
+                </label>
+
+                <label class="radio-label">
+                  <input type="radio" id="endemorfo" name="biotipo" value="endemorfo" [(ngModel)]="biotipo" class="radio-input">
+                  <span class="custom-radio"></span>
+                  Endemorfo
                 </label>
               </div>
-
-              <button class="btn-plano" (click)="irParaInforDisponibilidade()">Prôximo</button>
+              <button class="btn-plano"  (click)="salvarEAvancar()">Próximo</button>
         </div>
 
        </main>

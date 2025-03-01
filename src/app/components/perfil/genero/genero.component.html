@@ -45,14 +45,21 @@
     <body>
       <main class="container">
         <div class="container-plano-treino">
-              <h1>Qual a sua altura?</h1>
-              <div class="item-form">
+              <h1>Qual o seu gênero?</h1>
+              <div class="radio-container">
+                <label class="radio-label">
+                  <input type="radio" id="masculino" name="genero" value="masculino" [(ngModel)]="genero" class="radio-input">
+                  <span class="custom-radio"></span>
+                  Masculino
+                </label>
 
-                <label  class="label" for="altura">Altura:</label>
-                <input type="text" name ="altura" placeholder="Altura">
-
-            </div>
-              <button class="btn-plano" (click)="irParaAnalisePlanoBiotipo( )">Próximo</button>
+                <label class="radio-label">
+                  <input type="radio" id="feminino" name="genero" value="feminino" [(ngModel)]="genero" class="radio-input">
+                  <span class="custom-radio"></span>
+                  Feminino
+                </label>
+              </div>
+              <button class="btn-plano" (click)="salvarEAvancar()" >Próximo</button>
         </div>
 
        </main>

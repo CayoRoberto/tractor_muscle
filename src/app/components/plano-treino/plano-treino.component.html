@@ -1,154 +1,76 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-            <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta name="description" content="">
-                <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-                <title>Login</title>
-                <!-- Folhas de estilo -->
-                <link rel="stylesheet" href="/src/app/login/login.component.css">
+<html lang="pt-br">
 
-                <!--Swiper-->
-                <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>Plano de Treino</title>
 
+    <!-- Estilos opcionais (adapte ao seu projeto) -->
+    <link rel="stylesheet" href="/src/app/login/login.component.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 
-
-            <!-- CSS do cabeçalho -->
-            <!-- <link rel="stylesheet" href="../../assets/css/cabecalho/cabecalho.css">
-            <link rel="stylesheet" href="../../assets/css/cabecalho/navegacao.css">
-            <link rel="stylesheet" href="../../assets/css/menu/menu.css"> -->
-
-                <!-- Estilos -->
-
-
-
-
-
-                <!-- Ícones do Rodapé-->
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-                <!-- Fontes -->
-                <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Open+Sans:wght@500&display=swap" rel="stylesheet"> -->
-        </head>
-        <body>
-            <header class="cabecalho">
-                <div class="cabecalho-container">
-                    <!-- Logo -->
-                    <!-- <div  class="cabecalho-logo">Tractor Muscle</div> -->
-                    <!-- <a class="cabecalho-logo" href="#inicio">
-                        <img class="logo__image" src="assets/img/logotipo2.png" alt=" Tractor Muscle" width="80" height="55">
-
-                    </a> -->
-                    <a class="logo__nome">Tractor Muscle</a>
-
-                <!-- Navegação -->
-                 <nav class="cabecalho__navegacao" data-navegacao>
-                    <!-- Menu -->
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-container">
+            <a class="logo__nome">Tractor Muscle</a>
+            <nav class="cabecalho__navegacao" data-navegacao>
                 <div class="cabecalho__menu">
                     <i class="ri-close-line ri-lg" data-fechar></i>
-                    <!-- Itens -->
                     <span class="cabecalho__item-menu--logo">
                         <img src="/src/assets/img/logotipo2.png" alt="Logo Tractor Muscle">
                     </span>
                     <a href="#tractormuscle" class="cabecalho__item-menu">
-                        <span class="cabecalho__menu-texto">
-                            <button class="geral__botao primary-button">Página inicial</button>
-                        </span>
+                        <button class="geral__botao primary-button">Página inicial</button>
                     </a>
                     <a href="#blog" class="cabecalho__item-menu">
-                        <span class="cabecalho__menu-texto">
-                            <button class="geral__botao secundary-button">Blog</button>
-                        </span>
+                        <button class="geral__botao secundary-button">Blog</button>
                     </a>
                     <a href="#sobrenos" class="cabecalho__item-menu">
-                        <span class="cabecalho__menu-texto">
-                            <button class="geral__botao secundary-button">Sobre</button>
-                        </span>
+                        <button class="geral__botao secundary-button">Sobre</button>
                     </a>
                     <a href="#contato" class="cabecalho__item-menu">
-                        <span class="cabecalho__menu-texto">
-                            <button class="geral__botao secundary-button">Contato</button>
-                        </span>
+                        <button class="geral__botao secundary-button">Contato</button>
                     </a>
                 </div>
-                <div class= "menu__icon icon-menu"></div>
-              <div class="menu__icon icon-close"></div>
-                </nav>
+                <div class="menu__icon icon-menu"></div>
+                <div class="menu__icon icon-close"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="container-treino">
+            <div class="info-box">
+                <p>Gênero: {{ perfil?.genero }}</p>
+                <p>Objetivo: {{ perfil?.objetivo }}</p>
+                <p>Nome: {{ usuario?.nome }}</p>
+                <p>Nível: Iniciante</p>
             </div>
 
-            </header>
-
-            <main class="container">
-             <div class="container-treino">
-              <div class="info-box">
-                <p>Início: 03/01/2025</p>
-                <p>Vencimento: 18/06/2025</p>
-                <p>Gênero: Masculino</p>
-                <p>Objetivo: Ganho de massa muscular</p>
-                <p>Nome: #####</p>
-                <p>Nível: Iniciante</p>
-              </div>
-
-
-              <div class="training-container">
+            <div class="training-container">
                 <div class="navigation">
-                  <button class="btn-treino" (click)="previousTraining()">&lt;</button>
-                  <h2>{{ currentTrainingTitle }}</h2>
-                  <button class="btn-treino" (click)="nextTraining()">&gt;</button>
+                    <button class="btn-treino" (click)="previousTraining()">&lt;</button>
+                    <h2>{{ currentTrainingTitle }}</h2>
+                    <button class="btn-treino" (click)="nextTraining()">&gt;</button>
                 </div>
 
-                <div class="training-details" id="training-details">
-                  @if(trainings[currentIndex] == 'A'){
-                    <!-- Treino A (default) -->
-                  <ul id="training-a" class="training active">
-                    <li>ESCADA - 10 min</li>
-                    <li>SUPINO MÁQUINA - 4 x 12</li>
-                    <li>DESENVOLVIMENTO ARNOLD - 4 x 12</li>
-                    <li>CRUCIFIXO RETO - 4 x 12</li>
-                    <li>REMADA SERROTE - 4 x 12</li>
-                    <li>BÍCEPS ALTERNADO SCOTT ARRA W - 4 x 12</li>
-                    <li>BÍCEPS BANCO SCOTT BARRA W - 4 x 12</li>
-                  </ul>
-
-                  }@else if(trainings[currentIndex] == 'B'){
-                    <!-- Treino B -->
-                   <ul id="training-b" class="training active">
-                    <li>AQUECIMENTO NA ESTEIRA - 15 min</li>
-                    <li>SUPINO INCLINADO HALTER - 4 x 10</li>
-                    <li>AGACHAMENTO LIVRE - 4 x 12</li>
-                    <li>STIFF HALTER - 4 x 12</li>
-                    <li>REMADA CURVADA - 4 x 12</li>
-                    <li>TRÍCEPS TESTA - 4 x 12</li>
-                    <li>TRÍCEPS CORDA - 4 x 12</li>
-                  </ul>
-                  }@else if(trainings[currentIndex] == 'C'){
-                    <!-- Treino C -->
-                  <ul id="training-c" class="training active">
-                    <li>AQUECIMENTO NA BIKE - 15 min</li>
-                    <li>SUPINO DECLINADO - 4 x 10</li>
-                    <li>LEVANTAMENTO TERRA - 4 x 12</li>
-                    <li>PASSADA - 4 x 12</li>
-                    <li>DESENVOLVIMENTO OMBRO HALTER - 4 x 12</li>
-                    <li>ABDOMINAL CANIVETE - 4 x 20</li>
-                    <li>ABDOMINAL OBLIQUO - 4 x 20</li>
-                  </ul>
-
-                }@else{}
-
-                <h1>{{trainings[currentIndex] == 'C'}}</h1>
+                <div class="training-details">
+                    <ul class="training">
+                        <li *ngFor="let exercicio of exercicios">
+                            {{ exercicio.nome }} - {{ exercicio.series }} x {{ exercicio.repeticoes }}
+                        </li>
+                        <li *ngIf="exercicios.length === 0">Não há exercícios</li>
+                    </ul>
                 </div>
-              </div>
-             </div>
-            </main>
+            </div>
+        </div>
+    </main>
+</body>
 
-        </body>
-    </html>
+</html>

@@ -1,1 +1,26 @@
-<p>perfil works!</p>
+<div class="wizard-container">
+
+    <div class="progress-bar">
+      <div
+        *ngFor="let etapa of etapas; let i = index"
+        [class.active]="i === etapaAtualIndex"
+        class="step"
+      >
+        {{ i + 1 }}. {{ etapa.nome }}
+      </div>
+    </div>
+  
+    <router-outlet></router-outlet>
+  
+    <div class="navigation-buttons">
+      <button (click)="etapaAnterior()" [disabled]="etapaAtualIndex === 0">
+        Voltar
+      </button>
+  
+      <button (click)="proximaEtapa()">
+        {{ etapaAtualIndex < etapas.length - 1 ? 'Avançar' : 'Finalizar' }}
+      </button>
+    </div>
+  
+  </div>
+  

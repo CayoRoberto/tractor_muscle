@@ -48,13 +48,13 @@
               <h1>Qual a sua disponibilidade para ir a academia?</h1>
               <div class="radio-container">
                 <label class="radio-label">
-                  <input type="radio" id="novo" name="idade" value="novo" class="radio-input">
+                  <input type="radio" id="3x semana" name="disponibilidade" value="3x semana" [(ngModel)]="disponibilidade"  class="radio-input">
                   <span class="custom-radio"></span>
                   3x semana
                 </label>
 
                 <label class="radio-label">
-                  <input type="radio" id="jovem" name="idade" value="jovem" class="radio-input">
+                  <input type="radio" id="4x semana" name="disponibilidade" value="4x semana" [(ngModel)]="disponibilidade" class="radio-input">
                   <span class="custom-radio"></span>
                   4x semana
                 </label>
@@ -62,18 +62,18 @@
 
               <div class="radio-container">
                 <label class="radio-label">
-                  <input type="radio" id="adulto" name="idade" value="adulto" class="radio-input">
+                  <input type="radio" id="5x semana" name="disponibilidade" value="5x semana" [(ngModel)]="disponibilidade" class="radio-input">
                   <span class="custom-radio"></span>
                   5x semana
                 </label>
 
                 <label class="radio-label">
-                  <input type="radio" id="idoso" name="idade" value="idoso" class="radio-input">
+                  <input type="radio" id="6x semana" name="disponibilidade"   value="6x semana" [(ngModel)]="disponibilidade" class="radio-input">
                   <span class="custom-radio"></span>
                   6x semana
                 </label>
               </div>
-              <button class="btn-plano" (click)="irParaInforMedidasCorporais()">Próximo</button>
+              <button class="btn-plano" (click)="salvarEEnviar()">Finalizar</button>
         </div>
 
        </main>

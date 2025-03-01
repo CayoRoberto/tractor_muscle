@@ -45,21 +45,9 @@
     <body>
       <main class="container">
         <div class="container-plano-treino">
-              <h1>Qual o seu gênero?</h1>
-              <div class="radio-container">
-                <label class="radio-label">
-                  <input type="radio" id="masculino" name="genero" value="masculino" [(ngModel)]="perfil.genero" class="radio-input">
-                  <span class="custom-radio"></span>
-                  Masculino
-                </label>
-
-                <label class="radio-label">
-                  <input type="radio" id="feminino" name="genero" value="feminino" [(ngModel)]="perfil.genero" class="radio-input">
-                  <span class="custom-radio"></span>
-                  Feminino
-                </label>
-              </div>
-              <button class="btn-plano" (click)="irParaAnalisePlanoIdade()" >Próximo</button>
+              <h1>Qual a sua idade?</h1>
+              <input type="'number" [(ngModel)]="idade">
+              <button class="btn-plano" (click)="salvarEAvancar()">Próximo</button>
         </div>
 
        </main>

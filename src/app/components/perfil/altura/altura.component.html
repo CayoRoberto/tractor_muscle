@@ -45,35 +45,14 @@
     <body>
       <main class="container">
         <div class="container-plano-treino">
-              <h1>Qual a sua idade?</h1>
-              <div class="radio-container">
-                <label class="radio-label">
-                  <input type="radio" id="novo" name="idade" value="novo" class="radio-input">
-                  <span class="custom-radio"></span>
-                  Idade: 12 - 17
-                </label>
+              <h1>Qual a sua altura?</h1>
+              <div class="item-form">
 
-                <label class="radio-label">
-                  <input type="radio" id="jovem" name="idade" value="jovem" class="radio-input">
-                  <span class="custom-radio"></span>
-                  Idade: 18 - 29
-                </label>
-              </div>
+                <label  class="label" for="altura">Altura:</label>
+                <input type="number" name ="altura" placeholder="Altura" [(ngModel)]="altura">
 
-              <div class="radio-container">
-                <label class="radio-label">
-                  <input type="radio" id="adulto" name="idade" value="adulto" class="radio-input">
-                  <span class="custom-radio"></span>
-                  Idade: 30 - 49
-                </label>
-
-                <label class="radio-label">
-                  <input type="radio" id="idoso" name="idade" value="idoso" class="radio-input">
-                  <span class="custom-radio"></span>
-                  Idade: 50+
-                </label>
-              </div>
-              <button class="btn-plano" (click)="irParaInforAltura()">Próximo</button>
+            </div>
+              <button class="btn-plano" (click)="salvarEAvancar()">Próximo</button>
         </div>
 
        </main>

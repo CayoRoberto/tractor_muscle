@@ -4,14 +4,14 @@ export class Perfil{
 
   id!: number;
   genero!: string;
-  idade!: string;
+  idade!: number;
   altura!: number;
   biotipo!: string;
   objetivo!: string;
   disponibilidade!: string;
   usuario!: Usuario;
 
-  constructor(genero: string, idade: string, altura: number, biotipo: string, objetivo: string, disponibilidade: string, usuario: Usuario) {
+  constructor(genero: string, idade: number, altura: number, biotipo: string, objetivo: string, disponibilidade: string, usuario: Usuario) {
     this.genero = genero;
     this.idade = idade;
     this.altura = altura;

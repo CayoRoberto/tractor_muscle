@@ -52,10 +52,10 @@
 
                 <!-- Navegação -->
                  <nav class="cabecalho__navegacao" data-navegacao>
-
+                   
                 <div class="cabecalho__menu">
                     <i class="ri-close-line ri-lg" data-fechar></i>
-
+                    
                     <span class="cabecalho__item-menu--logo">
                         <img src="/src/assets/img/logotipo2.png" alt="Logo Tractor Muscle">
                         </span>
@@ -82,46 +82,51 @@
                     </div>
                     <div class= "menu__icon icon-menu"></div>
                     <div class="menu__icon icon-close"></div>
-
+              
 
                 </nav>
 
-
+                
             </div>
 
             </header>
            <main class="home">
-            <div class="usuario-home">
-              <h1>Olá, {{ usuario?.nome }} {{ usuario?.sobrenome }}!</h1>
-            </div>
-
-             <div class = "container_menu">
-              @if(sucesso){
-                <div class="menu">
-                  <div class="menu-opcoes">
-                    <button class="btn-menu" (click)="VisualizarTreino()">Visualizar treino</button>
-                    <button class="btn-menu" >Histórico</button>
-                  </div>
-
-                  <div class="menu-opcoes">
-
-                    <button class="btn-menu" >Conquistas</button>
-                    <button class="btn-menu" >Novo treino</button>
-
-                  </div>
-
+            @if(!verificacaoConcluida){
+                <div  class="loading">
+                    <p>Verificando seu perfil...</p>
                 </div>
-              }@else {
-                <div class="container-plano-treino">
+            }@else{
+                
 
-                  <h1>Iniciar plano de treino personalizado</h1>
-
-                  <button class="btn-iniciar-plano" (click)="irParaAnalisePlano()">Iniciar</button>
-            </div>
-              }
-
-             </div>
-
+                @if(perfilUsuarioExiste){
+                    <div class="menu">
+                      <div class="menu-opcoes">
+                        <button class="btn-menu" (click)="VisualizarTreino()">Visualizar treino</button>
+                        <button class="btn-menu" >Histórico</button>
+                      </div>
+      
+                      <div class="menu-opcoes">
+      
+                        <button class="btn-menu" >Conquistas</button>
+                        <button class="btn-menu" >Novo treino</button>
+      
+                      </div>
+      
+                    </div>
+                  }@else {
+                    <div class="usuario-home">
+                        <h1>Olá, {{ usuario?.nome }} {{ usuario?.sobrenome }}!</h1>
+                      </div>
+                      
+                    <div class="container-plano-treino">
+      
+                      <h1>Iniciar plano de treino personalizado</h1>
+      
+                      <button class="btn-iniciar-plano" (click)="irParaAnalisePlano()">Iniciar</button>
+                </div>
+                  }
+            }
+            
            </main>
         </body>
     </html>
